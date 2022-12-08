@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Daddy</title>
+</head>
+
+<style>
+    body {
+        background-image: linear-gradient(to top left, red 15%, yellow 85%);
+        text-align: center;
+    }
+
+    #clockdiv {
+        font-family: sans-serif;
+        color: white;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        margin-top: 12.5%;
+        margin-bottom: 12.7%;
+        font-size: 30px;
+    }
+
+    .div {
+        padding: 10px;
+        border-radius: 7%;
+        background: aqua;
+        display: inline-block;
+    }
+
+    #clockdiv div>span {
+        padding: 15px;
+        border-radius: 7%;
+        background: darkblue;
+        display: block;
+    }
+
+    .smalltext {
+        width: 5rem;
+        color: darkblue;
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div id="clockdiv">
+        <table>
+            <tr>
+                <td>
+                    <div class="div">
+                        <div class="smalltext">Days</div>
+                        <span class="days" id="day"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="div">
+                        <div class="smalltext">Hours</div>
+                        <span class="hours" id="hour"></span>
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <div class="div">
+                        <div class="smalltext">Minutes</div>
+                        <span class="minutes" id="minute"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="div">
+                        <div class="smalltext">Seconds</div>
+                        <span class="seconds" id="second"></span>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+        <script>
+
+            var deadline = new Date("dec 9, 2022 00:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+                if (t < 0) {
+                    clearInterval(x);
+                    window.location = 'daddy2.html';
+                    document.getElementById("day").innerHTML = '0';
+                    document.getElementById("hour").innerHTML = '0';
+                    document.getElementById("minute").innerHTML = '0';
+                    document.getElementById("second").innerHTML = '0';
+                }
+            }, 1000);
+        </script>
+</body>
+
+</html>

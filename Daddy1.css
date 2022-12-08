@@ -1,0 +1,212 @@
+body{
+    background-image: linear-gradient(to bottom right, blue 0%, red 100%);
+}
+
+p{
+    text-align: center;
+    margin-top: 7%;
+    word-spacing: 10px;
+    font-size: 300%;
+    font-family: 'Sacramento', cursive;
+    color: white;
+}
+
+.box{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1%;
+    height: 400px;
+    width: 600px;
+    border-radius: 70px;
+    background-color: aqua;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25), -4px -4px 20px rgba(0, 0, 0, 0.85);
+}
+
+.pic_1{
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+button{
+    text-align: center;
+    width: 400px;
+    height: 60px;
+    background-color: red;
+    border-color: red;
+    font-size: 20px;
+    margin-left: 35%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Crakling Sparkles */
+
+	.firework {
+	position: absolute;
+}
+.explosion {
+	position: absolute;
+	left: -2px;
+	bottom: 0;
+	width: 4px;
+	height: 80px;
+	transform-origin: 50% 100%;
+	/* background-color: rgba(0,0,0,.2); */
+	overflow: hidden;
+}
+.explosion:nth-child(1) {
+	transform: rotate(0deg) translateY(-15px);
+}
+.explosion:nth-child(2) {
+	transform: rotate(30deg) translateY(-15px);
+}
+.explosion:nth-child(3) {
+	transform: rotate(60deg) translateY(-15px);
+}
+.explosion:nth-child(4) {
+	transform: rotate(90deg) translateY(-15px);
+}
+.explosion:nth-child(5) {
+	transform: rotate(120deg) translateY(-15px);
+}
+.explosion:nth-child(6) {
+	transform: rotate(150deg) translateY(-15px);
+}
+.explosion:nth-child(7) {
+	transform: rotate(180deg) translateY(-15px);
+}
+.explosion:nth-child(8) {
+	transform: rotate(210deg) translateY(-15px);
+}
+.explosion:nth-child(9) {
+	transform: rotate(240deg) translateY(-15px);
+}
+.explosion:nth-child(10) {
+	transform: rotate(270deg) translateY(-15px);
+}
+.explosion:nth-child(11) {
+	transform: rotate(300deg) translateY(-15px);
+}
+.explosion:nth-child(12) {
+	transform: rotate(330deg) translateY(-15px);
+}
+
+.explosion::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 40px;
+	background-color: #f5cf52;
+}
+@keyframes explosion {
+	0% {
+		top: 100%;
+	}
+	33%, 100% {
+		top: -50%;
+	}
+}
+
+#firework1 {
+	left: 50%;
+	top: 50%;
+	transform: scale(1);
+}
+#firework1 .explosion::before {
+	animation: explosion 3s ease-in-out infinite;
+}
+
+#firework2 {
+	left: 40%;
+	top: 45%;
+	transform: scale(.7);
+}
+#firework2 .explosion::before {
+	animation: explosion 2s .2s ease-in-out infinite;
+}
+
+#firework3 {
+	left: 60%;
+	top: 65%;
+	transform: scale(.7);
+}
+#firework3 .explosion::before {
+	animation: explosion 2s .4s ease-in-out infinite;
+}
+
+#firework4 {
+	left: 60%;
+	top: 35%;
+	transform: scale(.5);
+}
+#firework4 .explosion::before {
+	animation: explosion 2s .4s ease-in-out infinite;
+}
+
+#firework5 {
+	left: 37%;
+	top: 75%;
+	transform: scale(.5);
+}
+#firework5 .explosion::before {
+	animation: explosion 2s .6s ease-in-out infinite;
+}
+#firework6 {
+	left: 50%;
+	top: 85%;
+	transform: scale(.8);
+}
+#firework6 .explosion::before {
+	animation: explosion 2s .6s ease-in-out infinite;
+}
+#firework7 {
+	left: 50%;
+	top: 20%;
+	transform: scale(.8);
+}
+#firework7 .explosion::before {
+	animation: explosion 2s .8s ease-in-out infinite;
+}
+#firework8 {
+	left: 25%;
+	top: 35%;
+	transform: scale(.9);
+}
+#firework8 .explosion::before {
+	animation: explosion 2s .8s ease-in-out infinite;
+}
+#firework9 {
+	left: 75%;
+	top: 30%;
+	transform: scale();
+}
+#firework9 .explosion::before {
+	animation: explosion 2s ease-in-out infinite;
+}
+#firework10 {
+	left: 75%;
+	top: 75%;
+	transform: scale(1);
+}
+#firework10 .explosion::before {
+	animation: explosion 2s ease-in-out infinite;
+}
+
+.youtube-link {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
